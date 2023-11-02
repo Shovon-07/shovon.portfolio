@@ -1,0 +1,94 @@
+.skills {
+  margin: 0 auto;
+}
+.skills .container {
+  background: var(--transparent-bg);
+  /* padding: 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 300px;
+}
+.skills .skillBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+}
+.skills .skill {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  margin: 50px 40px;
+}
+.skills .skill .outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: var(--shadow-1);
+}
+.skills .skill .inner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills .skill #number {
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+.skills circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  /* animation: progressAnim 2s linear forwards; */
+}
+.skills svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.skills .skill p {
+  text-align: center;
+  color: var(--text);
+  margin: 10px 0 0 0;
+}
+
+/* @keyframes progressAnim {
+  100% {
+    stroke-dashoffset: 165;
+  }
+} */
+
+/* Web development */
+.skills .webDes {
+  stroke-dashoffset: 100;
+}
+
+/* Web development */
+.skills .webDev {
+  stroke-dashoffset: 200;
+}
+
+/* Graphic design */
+.skills .graPhic {
+  stroke-dashoffset: 150;
+}
+
+/* Responsive */
+/* @media screen and (max-width: 700px) {
+  .skills .skill {
+    margin: 50px 20px;
+  }
+} */

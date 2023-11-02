@@ -1,0 +1,194 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+  font-family: var(--body-font);
+
+  position: relative;
+}
+body::after {
+  content: "";
+  background: var(--transparent-bg);
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  transition: var(--trans);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+body.navActive::after {
+  opacity: 1;
+  z-index: 98;
+}
+.section {
+  /* height: calc(100vh - 100px);
+  max-height: 600px; */
+  width: 100%;
+  height: 100%;
+}
+.section-padding {
+  padding: 100px 0 0 0;
+}
+.container {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+.sub-heading,
+.text {
+  color: var(--secondary-text);
+  font-weight: 500;
+}
+.heading {
+  color: var(--text);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.dot-img {
+  background: url("../img/squre_dots.png");
+  height: 30px;
+  width: 60px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*___ Cartoon bg start ___*/
+.bg-pic {
+  background: url("../img/bg.png");
+  background-position: center;
+  background-size: cover;
+  transform: rotateX(180deg);
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+.vector-img {
+  position: absolute;
+  top: 15%;
+  width: 300px;
+  height: 300px;
+  transition: all 1s;
+  animation-name: vector-img;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes vector-img {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+/*___ Cartoon bg end ___*/
+
+.right {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.right .dot-img {
+  position: absolute;
+  right: 10%;
+  top: 0;
+  transform: rotate(90deg);
+}
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.title span {
+  color: var(--main_color);
+}
+.my-btn {
+  font-size: 18px;
+  background: var(--bg);
+  padding: 10px 40px;
+  box-shadow: var(--shadow-1);
+  display: inline-block;
+}
+.my-btn:hover {
+  box-shadow: var(--shadow-2);
+}
+.greenIcon {
+  color: var(--main_color);
+  transform: rotate(180deg);
+  font-size: 18px;
+}
+.extra-text {
+  color: var(--secondary-text);
+}
+
+/*___ Theme toggler start ___*/
+.toggle-theme {
+  color: var(--text);
+  background: var(--bg-color);
+  font-size: 20px;
+  box-shadow: var(--shadow-1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 20%;
+  right: 1%;
+  z-index: 98;
+}
+/*___ Theme toggler end ___*/
+
+/*___ Go to top start ___*/
+.scroll-to-top {
+  color: var(--text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: fixed;
+  bottom: 15%;
+  right: 2%;
+  z-index: 97;
+}
+/*___ Go to top end ___*/
+
+@media screen and (max-width: 750px) {
+  .section {
+    height: 100%;
+    max-height: 100%;
+  }
+  .dot-img {
+    display: none;
+  }
+}

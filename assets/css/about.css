@@ -1,0 +1,50 @@
+/*___ About start ___*/
+.about .left .description-box {
+  background: var(--transparent-bg);
+  border-left: 5px solid var(--yellow);
+  padding: 20px;
+  width: 100%;
+  position: relative;
+}
+.about .left .heading {
+  margin-bottom: 20px;
+}
+.about .left .sub-heading {
+  font-size: 14px;
+  line-height: 2rem;
+  text-align: justify;
+}
+.about .left .dot-img {
+  margin: 50px auto 0px auto;
+}
+.about .right .about-img {
+  background: url("../img/web-page-rounded-border.png");
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.about .right .about-img::after {
+  content: "";
+  background: var(--yellow);
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+/*___ About end ___*/
+
+/*___ Responsive start ___*/
+@media screen and (max-width: 750px) {
+  .about .grid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about .right .about-img {
+    margin-bottom: 30px;
+  }
+}
+/*___ Responsive end ___*/

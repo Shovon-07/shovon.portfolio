@@ -1,0 +1,42 @@
+/*___ Services start ___*/
+.services .container .card-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.services .container .card {
+  flex: 1 29%;
+  align-self: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: var(--shadow-1);
+  padding: 30px;
+  margin: 0 20px 50px 20px;
+  cursor: pointer;
+  transition: var(--trans);
+}
+.services .container .card:hover {
+  transform: translateY(-10px);
+}
+.services .container .card i {
+  color: var(--text);
+  font-size: 40px;
+}
+.services .container .card .heading {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/*___ Services end ___*/
+@media screen and (max-width: 800px) {
+  .services .card-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .services .card-box .card {
+    flex: 1;
+  }
+}

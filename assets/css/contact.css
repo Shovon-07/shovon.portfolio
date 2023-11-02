@@ -1,0 +1,166 @@
+.contact .container {
+  align-items: center;
+}
+.contact .left {
+  position: relative;
+}
+.contact .left .contact-img {
+  background: url("../img/contact.png");
+  background-size: cover;
+  background-position: center;
+  bottom: 5%;
+  left: 15%;
+}
+.contact .right {
+  /* display: block; */
+}
+.contact .right form {
+  background: var(--bg-color);
+  width: 90%;
+  padding: 50px 30px;
+  border-radius: 12px;
+  transition: var(--trans);
+  box-shadow: var(--shadow-1);
+}
+.contact .right .input-box {
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  transition: var(--trans);
+}
+.contact .right .input-box .input {
+  background: transparent;
+  border: 2px solid var(--text);
+  outline: none;
+  border-radius: 50px;
+  width: 100%;
+  padding: 15px 30px;
+  color: var(--text);
+  letter-spacing: 1px;
+  transition: var(--trans);
+  z-index: 96;
+}
+.contact .right .input-box textarea {
+  border-radius: 15px !important;
+  resize: vertical;
+  font-size: 16px;
+  transition: var(--trans);
+}
+.contact .right .input-box .label {
+  position: absolute;
+  top: 47%;
+  transform: translateY(-50%);
+  color: var(--text);
+  letter-spacing: 1px;
+  border-radius: 50px;
+  margin-left: 20px;
+  padding: 0 10px;
+  transition: var(--trans);
+  pointer-events: none;
+  z-index: 95;
+}
+.contact .right .input-box .textarea-label {
+  top: 18%;
+  transition: var(--trans);
+}
+.contact .right .input-box .input:focus,
+.contact .right .input-box .input:valid {
+  border: 2px solid var(--main_color);
+}
+.contact .input-box .input:focus + .label,
+.contact .input-box .input:valid + .label {
+  font-size: 14px;
+  color: var(--main_color);
+  transform: translateY(-150%);
+  background: var(--bg-color);
+}
+.contact .input-box textarea:focus + .textarea-label,
+.contact .input-box textarea:valid + .textarea-label {
+  top: 14%;
+}
+.contact .right .input-box:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .right .input-box .my-btn {
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-size: 16px;
+  cursor: pointer;
+}
+.contact .right .input-box .my-btn:hover {
+  box-shadow: var(--shadow-1);
+}
+
+/*___ Responsive ___*/
+@media screen and (max-width: 1300px) {
+  .contact .grid {
+    /* grid-template-columns: 1fr 2fr; */
+  }
+  .contact .left .bg-pic {
+    width: 400px;
+    height: 400px;
+  }
+  .contact .left .contact-img {
+    bottom: 8%;
+    left: 17%;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .contact .grid {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media screen and (max-width: 980px) {
+  .contact .left .bg-pic {
+    width: 300px;
+    height: 300px;
+  }
+  .contact .left .contact-img {
+    width: 160px;
+    height: 160px;
+    left: 15%;
+    top: 12%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .contact .container .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact .dot-img {
+    display: none;
+  }
+  .contact .left {
+    margin: 0 auto 30px auto;
+  }
+  .contact .left .contact-img {
+    left: 20%;
+    top: 20%;
+  }
+  .contact .right form {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .contact .right form {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact .right form {
+    padding: 40px 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contact .right .input-box {
+    font-size: 13px;
+  }
+}

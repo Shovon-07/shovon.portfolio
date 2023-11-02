@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: rgb(43, 42, 42);
+  --secondary-bg: rgb(19, 19, 19);
+  --transparent-bg: #1b1b1b5e;
+
+  --text: #fff;
+  --secondary-text: #b9b9b9;
+
+  /* --main_color: rgb(94, 247, 145); */
+  --main_color: rgb(94, 104, 247);
+  --yellow: #f2f902;
+
+  --trans: 0.5s all;
+  --reveal-trans: 1s all;
+  --opacity: 0.3;
+  --body-font: "Poppins", sans-serif;
+  --cursive-font: "Cedarville Cursive", cursive;
+  --shadow-1: 3px 3px 10px var(--secondary-bg),
+    -3px -3px 10px var(--secondary-bg);
+  --shadow-2: inset 1px 1px 10px var(--secondary-bg);
+}
+/* Change Theme */
+body.light {
+  --text: rgb(63, 63, 63);
+  --secondary-text: #525252;
+
+  --bg-color: #fff;
+  --secondary-bg: #aaaaaa;
+  --transparent-bg: #cccccc69;
+
+  --opacity: 1;
+  --shadow-1: 3px 3px 10px var(--secondary-bg),
+    -3px -3px 10px var(--secondary-bg);
+  --shadow-2: inset 1px 1px 10px var(--secondary-bg);
+}
+
+/*________________ custome scroll bar start ________________*/
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+/*________________ custome scroll bar end ________________*/

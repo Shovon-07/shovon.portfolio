@@ -1,0 +1,170 @@
+/*___ projects start ___*/
+.tab-container {
+  background: var(--bg-color);
+  box-shadow: var(--shadow-1);
+  padding: 20px;
+  overflow: hidden;
+}
+.tab-container .tab-box {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid var(--yellow);
+}
+.tab-container .tab-box .tab-btn {
+  color: var(--text);
+  background: transparent;
+  border-radius: 12px;
+  outline: none;
+  border: 0;
+  padding: 8px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.tab-container .tab-box .tab-btn::after {
+  content: "";
+  background: var(--main_color);
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: var(--trans);
+  z-index: -1;
+}
+.tab-container .tab-box .tab-btn.active::after {
+  opacity: 1;
+}
+.tab-container .content-box {
+  overflow: hidden;
+}
+.tab-container .content-box .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1100px;
+  display: none;
+  animation: moving 1s ease;
+}
+@keyframes moving {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.tab-container .content-box .content.active {
+  display: flex;
+}
+.tab-container .content-box .content .content-card {
+  width: 300px;
+  height: 150px;
+  margin: 20px 10px;
+  box-shadow: var(--shadow-1);
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+.tab-container .content-box .content .content-card::after {
+  content: "";
+  backdrop-filter: blur(8px);
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: var(--trans);
+  border-radius: 10px;
+  z-index: 1;
+}
+.tab-container .content-box .content .content-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.tab-container .content-box .content .content-card #viewProject {
+  color: var(--text);
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: var(--trans);
+  z-index: 2;
+}
+.tab-container .content-box .content .content-card:hover:after {
+  opacity: 1;
+}
+.tab-container .content-box .content .content-card:hover #viewProject {
+  opacity: 1;
+  transition: var(--trans);
+}
+
+.projects .dot-img {
+  margin: 30px auto 0 auto;
+}
+/*___ projects end ___*/
+
+/*___ Responsive ___*/
+@media screen and (max-width: 800px) {
+  .tab-container .tab-box .tab-btn {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+  .tab-container .content-box .content .content-card {
+    width: 200px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .tab-container .tab-box {
+    justify-content: space-between;
+  }
+  .tab-container .tab-box .tab-btn {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .tab-container .tab-box .tab-btn {
+    font-size: 12px;
+  }
+  .tab-container .content-box .content .content-card {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .tab-container .tab-box .tab-btn {
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .tab-container .tab-box .tab-btn {
+    padding: 3px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .tab-container .tab-box .tab-btn {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .tab-container .tab-box .tab-btn {
+    font-size: 8px;
+  }
+}

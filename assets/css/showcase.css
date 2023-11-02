@@ -1,0 +1,104 @@
+/*___ Showcase start ___*/
+.showcase_area {
+  overflow-x: hidden;
+}
+.showcase_area .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.showcase_area .left .sub-heading {
+  border-left: 5px solid var(--yellow);
+  padding-left: 10px;
+}
+.showcase_area .left .heading {
+  line-height: 5rem;
+  font-size: 40px;
+}
+.showcase_area .left .text {
+  line-height: 2rem;
+}
+.showcase_area .left .text span {
+  color: var(--yellow);
+  font-weight: bold;
+  font-size: 30px;
+}
+.showcase_area .left .dot-img {
+  margin: 50px auto 0px auto;
+}
+.showcase_area .left .my-btn {
+  margin: 30px 0 0 50px;
+}
+.showcase_area .right .showcase_img {
+  background: url("../img/sittingdesk.png");
+  background-size: cover;
+  background-position: center;
+  transform: scale(0.8);
+  transition: var(--reveal-trans);
+}
+/*___ Showcase end ___*/
+
+/*___ Responsive start ___*/
+@media screen and (max-width: 950px) {
+  .showcase_area .left .sub-heading {
+    font-size: 15px;
+  }
+  .showcase_area .left .heading {
+    font-size: 30px;
+  }
+  .showcase_area .left .text {
+    font-size: 14px;
+  }
+  .showcase_area .left .my-btn {
+    margin: 30px 0;
+  }
+  .showcase_area .right .bg-pic {
+    width: 400px;
+    height: 400px;
+  }
+  .showcase_area .right .showcase_img {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .showcase_area .right .bg-pic {
+    width: 300px;
+    height: 300px;
+  }
+  .showcase_area .right .showcase_img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .showcase_area .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .showcase_area .left {
+    text-align: center;
+  }
+  .showcase_area .left .heading {
+    order: 1;
+  }
+  .showcase_area .left .sub-heading {
+    text-align: left;
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .showcase_area .left .sub-heading {
+    font-size: 15px;
+  }
+  .showcase_area .left .heading {
+    font-size: 25px;
+  }
+  .showcase_area .left .text {
+    font-size: 14px;
+  }
+}
+/*___ Responsive end ___*/
