@@ -68,6 +68,18 @@
     </div>
     <!--------------- Theme toggler end --------------->
 
+    <!--------------- Alert popup start --------------->
+    <div class="popup">
+      <img src="./assets/img/alert.png" alt="" />
+      <p>
+        I am sincerely sorry. This contact form is currently not working. If you
+        want to contact me, please contact me from the social media link given
+        in the footer section.
+      </p>
+      <button>OK</button>
+    </div>
+    <!--------------- Alert popup end --------------->
+
     <!--------------- Go to top start --------------->
     <div class="scroll-to-top hover-target">
       <i class="fa-sharp fa-solid fa-arrow-up"></i>
@@ -384,23 +396,29 @@
           <div class="right">
             <form>
               <div class="input-box">
-                <input type="text" class="input" required />
+                <input type="text" class="input" id="input" required />
                 <div class="label">Enter your name</div>
               </div>
               <div class="input-box" style="margin: 40px 0">
-                <input type="text" class="input" required />
+                <input type="text" class="input" id="input" required />
                 <div class="label">Enter your email</div>
               </div>
               <div class="input-box" class="input" style="margin: 40px 0">
-                <input type="text" class="input" required />
+                <input type="text" class="input" id="input" required />
                 <div class="label">Subject</div>
               </div>
               <div class="input-box" class="input" style="margin: 40px 0">
-                <textarea class="input" cols="5" rows="5" required></textarea>
+                <textarea
+                  class="input"
+                  id="input"
+                  cols="5"
+                  rows="5"
+                  required
+                ></textarea>
                 <div class="label textarea-label">Message</div>
               </div>
               <div class="input-box">
-                <button class="my-btn">Send</button>
+                <input type="submit" class="my-btn" value="Send" disabled />
               </div>
             </form>
           </div>
@@ -451,103 +469,3 @@
     <script src="./assets/js/script.jquery.js"></script>
   </body>
 </html>
-
-<!-- card info  -->
-<!-- 
-  <div class="block">
-          <div class="box">
-            <div class="progressTxtBox">
-              <p class="number">
-                <span class="num">80</span>
-                <span class="sub">%</span>
-              </p>
-              <p class="title">HTML</p>
-            </div>
-          </div>
-          <span class="dots"></span>
-          <svg class="svg">
-            <defs>
-              <linearGradient id="gradientStyle">
-                <stop offset="0%" stop-color="#565656" />
-                <stop offset="100%" stop-color="#b7b5b5" />
-              </linearGradient>
-            </defs>
-            <circle class="circle" cx="90" cy="90" r="80" />
-          </svg>
-        </div>
-        <div class="block">
-          <div class="box">
-            <div class="progressTxtBox">
-              <p class="number">
-                <span class="num">90</span>
-                <span class="sub">%</span>
-              </p>
-              <p class="title">CSS</p>
-            </div>
-          </div>
-          <span class="dots"></span>
-          <svg class="svg">
-            <circle class="circle" cx="90" cy="90" r="80" />
-          </svg>
-        </div>
-        <div class="block">
-          <div class="box">
-            <div class="progressTxtBox">
-              <p class="number">
-                <span class="num">70</span>
-                <span class="sub">%</span>
-              </p>
-              <p class="title">JS</p>
-            </div>
-          </div>
-          <span class="dots"></span>
-          <svg class="svg">
-            <circle class="circle" cx="90" cy="90" r="80" />
-          </svg>
-        </div>
-        <div class="block">
-          <div class="box">
-            <div class="progressTxtBox">
-              <p class="number">
-                <span class="num">50</span>
-                <span class="sub">%</span>
-              </p>
-              <p class="title">PHP</p>
-            </div>
-          </div>
-          <span class="dots"></span>
-          <svg class="svg">
-            <circle class="circle" cx="90" cy="90" r="80" />
-          </svg>
-        </div>
-        <div class="block">
-          <div class="box">
-            <div class="progressTxtBox">
-              <p class="number">
-                <span class="num">40</span>
-                <span class="sub">%</span>
-              </p>
-              <p class="title">JAVA</p>
-            </div>
-          </div>
-          <span class="dots"></span>
-          <svg class="svg">
-            <circle class="circle" cx="90" cy="90" r="80" />
-          </svg>
-        </div>
-        <div class="block">
-          <div class="box">
-            <div class="progressTxtBox">
-              <p class="number">
-                <span class="num">20</span>
-                <span class="sub">%</span>
-              </p>
-              <p class="title">PYTHON</p>
-            </div>
-          </div>
-          <span class="dots"></span>
-          <svg class="svg">
-            <circle class="circle" cx="90" cy="90" r="80" />
-          </svg>
-        </div>
- -->

@@ -1,4 +1,43 @@
-.contact .container {
+<!--------------- Contact section start --------------->
+    <section class="contact section-padding" id="contact">
+      <div class="title"><span>Contact</span> me</div>
+      <div class="container section">
+        <div class="grid">
+          <div class="left">
+            <div class="bg-pic"></div>
+            <div class="contact-img vector-img"></div>
+            <div class="dot-img"></div>
+          </div>
+          <div class="right">
+            <form>
+              <div class="input-box">
+                <input type="text" class="input" required />
+                <div class="label">Enter your name</div>
+              </div>
+              <div class="input-box" style="margin: 40px 0">
+                <input type="text" class="input" required />
+                <div class="label">Enter your email</div>
+              </div>
+              <div class="input-box" class="input" style="margin: 40px 0">
+                <input type="text" class="input" required />
+                <div class="label">Subject</div>
+              </div>
+              <div class="input-box" class="input" style="margin: 40px 0">
+                <textarea class="input" cols="5" rows="5" required></textarea>
+                <div class="label textarea-label">Message</div>
+              </div>
+              <div class="input-box">
+                <button class="my-btn">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--------------- Contact section end --------------->
+css ===>
+    /* Contact section start */
+    .contact .container {
   align-items: center;
 }
 .contact .left {
@@ -30,7 +69,7 @@
 }
 .contact .right .input-box .input {
   background: transparent;
-  border: 2px solid var(--secondary-text);
+  border: 2px solid var(--text);
   outline: none;
   border-radius: 50px;
   width: 100%;
@@ -41,9 +80,6 @@
   z-index: 96;
 }
 .contact .right .input-box textarea {
-  background: transparent;
-  border: 2px solid var(--secondary-text);
-  outline: none;
   border-radius: 15px !important;
   resize: vertical;
   font-size: 16px;
@@ -94,7 +130,7 @@
   cursor: pointer;
 }
 .contact .right .input-box .my-btn:hover {
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-1);
 }
 
 /*___ Responsive ___*/
@@ -167,3 +203,5 @@
     font-size: 13px;
   }
 }
+
+    /* Contact section end */

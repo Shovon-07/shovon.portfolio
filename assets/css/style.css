@@ -183,6 +183,59 @@ a {
 }
 /*___ Go to top end ___*/
 
+/*___ Alert popup start ___*/
+.popup {
+  background: var(--alert-bg);
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  max-width: 1000px;
+  min-height: 200px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%) scale(0.1);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.15s all;
+  z-index: 1000;
+}
+.popup img {
+  width: 50px;
+  height: 50px;
+}
+.popup p {
+  font-size: 15px;
+  color: #505050;
+  margin: 20px 0;
+}
+.popup button {
+  font-size: 20px;
+  color: #fff;
+  background: rgb(0, 172, 0);
+  border: none;
+  outline: none;
+  width: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0%) scale(1);
+}
+/*___ Alert popup end ___*/
+
+@media screen and (max-width: 950px) {
+  .popup {
+    width: 80%;
+  }
+}
 @media screen and (max-width: 750px) {
   .section {
     height: 100%;
@@ -190,5 +243,10 @@ a {
   }
   .dot-img {
     display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .popup {
+    width: 100%;
   }
 }
