@@ -25,6 +25,13 @@ body.navActive::after {
   opacity: 1;
   z-index: 98;
 }
+.favIcon {
+    z-index: 1000;
+}
+::selection {
+    color: var(--main_color);
+    background: var(--text);
+}
 .section {
   /* height: calc(100vh - 100px);
   max-height: 600px; */
