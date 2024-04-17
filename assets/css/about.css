@@ -26,6 +26,9 @@
   background-repeat: no-repeat;
   position: relative;
 }
+.about .right img {
+  width: 100%;
+}
 .about .right .about-img::after {
   content: "";
   background: var(--yellow);
@@ -35,12 +38,6 @@
   top: 0;
   left: -20px;
 }
-.about .right .about-img img {
-  width:100%;
-  height:auto;
-}
-/*___ About end ___*/
-
 /*___ Responsive start ___*/
 @media screen and (max-width: 750px) {
   .about .grid {

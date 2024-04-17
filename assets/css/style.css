@@ -26,11 +26,11 @@ body.navActive::after {
   z-index: 98;
 }
 .favIcon {
-    z-index: 1000;
+  z-index: 1000;
 }
 ::selection {
-    color: var(--main_color);
-    background: var(--text);
+  color: var(--main_color);
+  background: var(--text);
 }
 .section {
   /* height: calc(100vh - 100px);
