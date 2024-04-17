@@ -18,9 +18,9 @@
   margin: 50px auto 0px auto;
 }
 .about .right .about-img {
-  background: url("../img/web-page-rounded-border.png");
+  /* background: url("../img/web-page-rounded-border.png"); */
   width: 200px;
-  height: 200px;
+  height: 230px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,6 +34,10 @@
   position: absolute;
   top: 0;
   left: -20px;
+}
+.about .right .about-img img {
+  width:100%;
+  height:auto;
 }
 /*___ About end ___*/
 
