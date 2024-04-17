@@ -1,5 +1,6 @@
 /*___ Header start ___*/
 header {
+  box-shadow: var(--shadow-1);
   position: fixed;
   width: 100%;
   top: 0;
@@ -27,7 +28,7 @@ header .logo a {
   font-family: var(--cursive-font);
   font-weight: bold;
   display: inline-block;
-  height: 80px;
+  height: 70px;
   line-height: 80px;
   transition: var(--trans);
 }
@@ -35,8 +36,8 @@ header .logo a span {
   color: var(--main_color);
 }
 header.scrolled .logo a {
-  height: 60px;
-  line-height: 60px;
+  height: 55px;
+  line-height: 55px;
 }
 .menu ul li {
   margin-left: 30px;
