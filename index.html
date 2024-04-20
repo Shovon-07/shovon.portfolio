@@ -49,9 +49,6 @@
       rel="stylesheet"
       href="./assets/css/font_awesome/fontawesome.min.css"
     />
-    <!-- Owl carousel -->
-    <link rel="stylesheet" href="./assets/css/Owl-Carousel/owl.carousel.css" />
-    <link rel="stylesheet" href="./assets/css/Owl-Carousel/owl.theme.css" />
   </head>
   <body id="body">
     <!--------------- Header start --------------->
@@ -422,23 +419,23 @@
             <div class="dot-img"></div>
           </div>
           <div class="right">
-            <form>
+            <form id="contactForm">
               <div class="input-box">
-                <input type="text" class="input" id="input" required />
+                <input type="text" class="input" id="name" required />
                 <div class="label">Enter your name</div>
               </div>
               <div class="input-box" style="margin: 40px 0">
-                <input type="text" class="input" id="input" required />
+                <input type="text" class="input" id="email" required />
                 <div class="label">Enter your email</div>
               </div>
               <div class="input-box" class="input" style="margin: 40px 0">
-                <input type="text" class="input" id="input" required />
+                <input type="text" class="input" id="subject" required />
                 <div class="label">Subject</div>
               </div>
               <div class="input-box" class="input" style="margin: 40px 0">
                 <textarea
                   class="input"
-                  id="input"
+                  id="msg"
                   cols="5"
                   rows="5"
                   required
@@ -446,12 +443,14 @@
                 <div class="label textarea-label">Message</div>
               </div>
               <div class="input-box">
-                <input type="submit" class="my-btn" value="Send" disabled />
+                <!-- <input type="submit" class="my-btn" value="Send" /> -->
+                <button class="my-btn">Send</button>
               </div>
             </form>
           </div>
         </div>
       </div>
+      <!-- <button onclick="getData()">Get data</button> -->
     </section>
     <!--------------- Contact section end --------------->
 
@@ -484,16 +483,45 @@
     </footer>
     <!--------------- Footer section end --------------->
 
-    <!-- Jquery -->
     <script src="./assets/js/jquery-1.9.1.min.js"></script>
-    <!-- Owl carousel -->
-    <script src="./assets/js/owl.carousel.js"></script>
-    <!-- Auto typing -->
+    <script src="./assets/js/axios.min.js"></script>
     <script src="./assets/js/typed.umd.js"></script>
-    <!-- Window reveal -->
     <script src="./node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
-    <!-- Customize js -->
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/script.jquery.js"></script>
+
+    <script>
+      let contactForm = document.querySelector("#contactForm");
+
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.querySelector("#name").value;
+        const email = document.querySelector("#email").value;
+        const subject = document.querySelector("#subject").value;
+        const msg = document.querySelector("#msg").value;
+        const data = {
+          name: name,
+          email: email,
+          subject: subject,
+          msg: msg,
+        };
+        const url = "https://aljubairshovon.com/mail.php";
+
+        axios
+          .post(url, data)
+          .then((response) => {
+            console.log("Response:", response.data);
+
+            // Clear input
+            document.querySelector("#name").value = "";
+            document.querySelector("#email").value = "";
+            document.querySelector("#subject").value = "";
+            document.querySelector("#msg").value = "";
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      });
+    </script>
   </body>
 </html>

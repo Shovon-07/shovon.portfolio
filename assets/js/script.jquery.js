@@ -1,23 +1,9 @@
 $(document).ready(function () {
-  //___ Owl carousel start ___//
-  $(".projects_carousel").owlCarousel({
-    items: 1,
-    touchDrag: true,
-    mouseDrag: true,
-
-    // Responsive
-    responsive: true,
-    itemsDesktop: [1400, 3],
-    itemsDesktopSmall: [1000, 2],
-    itemsTablet: [700, 1],
-  });
-  //___ Owl carousel end ___//
-
   //___ Auto type start ___//
   // text effect 1
   var typed = new Typed("#element", {
     strings: ["Front End Developer", "Back End Developer", "Graphic Designer"],
-    typeSpeed: 90,
+    typeSpeed: 80,
     backSpeed: 50,
     startDelay: 1000,
     cursorChar: "_",
