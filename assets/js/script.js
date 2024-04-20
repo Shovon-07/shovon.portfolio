@@ -122,8 +122,7 @@ tab_btn.forEach((items, index) => {
 //_____ Sliding tab end _____//
 
 //___ Contact alert start ___//
-/*
-let contactInput = document.querySelectorAll("#input");
+let contactInput = document.querySelectorAll(".input");
 let popup = document.querySelector(".popup");
 let popupBtn = document.querySelector(".popup button");
 
@@ -135,5 +134,4 @@ contactInput.forEach((contactInputs) => {
 popupBtn.addEventListener("click", () => {
   popup.classList.remove("active");
 });
-*/
 //___ Contact alert end ___//

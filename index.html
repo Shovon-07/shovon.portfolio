@@ -444,7 +444,7 @@
               </div>
               <div class="input-box">
                 <!-- <input type="submit" class="my-btn" value="Send" /> -->
-                <button class="my-btn">Send</button>
+                <button class="my-btn" disabled>Send</button>
               </div>
             </form>
           </div>
@@ -491,37 +491,37 @@
     <script src="./assets/js/script.jquery.js"></script>
 
     <script>
-      let contactForm = document.querySelector("#contactForm");
+      // let contactForm = document.querySelector("#contactForm");
 
-      contactForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const name = document.querySelector("#name").value;
-        const email = document.querySelector("#email").value;
-        const subject = document.querySelector("#subject").value;
-        const msg = document.querySelector("#msg").value;
-        const data = {
-          name: name,
-          email: email,
-          subject: subject,
-          msg: msg,
-        };
-        const url = "https://aljubairshovon.com/mail.php";
+      // contactForm.addEventListener("submit", (e) => {
+      //   e.preventDefault();
+      //   const name = document.querySelector("#name").value;
+      //   const email = document.querySelector("#email").value;
+      //   const subject = document.querySelector("#subject").value;
+      //   const msg = document.querySelector("#msg").value;
+      //   const data = {
+      //     name: name,
+      //     email: email,
+      //     subject: subject,
+      //     msg: msg,
+      //   };
+      //   const url = "https://aljubairshovon.com/mail.php";
 
-        axios
-          .post(url, data)
-          .then((response) => {
-            console.log("Response:", response.data);
+      //   axios
+      //     .post(url, data)
+      //     .then((response) => {
+      //       console.log("Response:", response.data);
 
-            // Clear input
-            document.querySelector("#name").value = "";
-            document.querySelector("#email").value = "";
-            document.querySelector("#subject").value = "";
-            document.querySelector("#msg").value = "";
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
-      });
+      //       // Clear input
+      //       document.querySelector("#name").value = "";
+      //       document.querySelector("#email").value = "";
+      //       document.querySelector("#subject").value = "";
+      //       document.querySelector("#msg").value = "";
+      //     })
+      //     .catch((error) => {
+      //       console.error("Error:", error);
+      //     });
+      // });
     </script>
   </body>
 </html>
