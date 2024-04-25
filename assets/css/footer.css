@@ -44,6 +44,13 @@
 .footer .container .icons a:hover::after {
   height: 100%;
 }
+.footer .container .share-btn {
+  color: var(--text);
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 15px;
+}
 /*___ Footer end ___*/
 
 /*___ Responsive ___*/

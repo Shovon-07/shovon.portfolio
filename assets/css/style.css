@@ -132,14 +132,17 @@ a {
 .title span {
   color: var(--main_color);
 }
-.my-btn {
+.my-btn,
+.share-btn {
   font-size: 18px;
   background: var(--bg);
   padding: 10px 40px;
   box-shadow: var(--shadow-1);
   display: inline-block;
+  cursor: pointer;
 }
-.my-btn:hover {
+.my-btn:hover,
+.share-btn:hover {
   box-shadow: var(--shadow-2);
 }
 .greenIcon {

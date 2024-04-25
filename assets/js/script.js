@@ -135,3 +135,24 @@ popupBtn.addEventListener("click", () => {
   popup.classList.remove("active");
 });
 //___ Contact alert end ___//
+
+//___ Web share api start ___//
+const shareBtn = document.querySelector("#shareBtn");
+const title = window.document.title;
+const url = window.document.location.href;
+shareBtn.addEventListener("click", () => {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: `${title}`,
+        url: `${url}`,
+      })
+      .then(() => {
+        console.log("Thanks for share");
+      })
+      .catch(console.error);
+  } else {
+    alert("Error occurred");
+  }
+});
+//___ Web share api end ___//
